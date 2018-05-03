@@ -4,20 +4,35 @@ import java.util.*;
 
 public class commonElements {
 
+	static List<String> elementList = new ArrayList();
+	static List<String> elementList2 = new ArrayList();
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
+		String[] array1 = { "Joe", "Jack", "June", "Jean", "Beano", "Booya" };
+		String[] array2 = { "Jo", "ack", "une", "ean", "Bano", "Booya" };
 		
-		int a,b;		
-		String[] array1 = {"Joe", "Jack", "June", "Jean", "Beano", "Booya"};
-		String[] array2 = {"Brenda", "Brock", "Shelly", "Sheila", "Jack", "Joe"};
-		int numlength1 = array1.length;
-		int numlength2 = array2.length;
+		List<String> elementList = Arrays.asList(array1);
+		List<String> elementList2 = Arrays.asList(array2);
 		
-		for (a=0; a<numlength1; a += 1 ) {
-			for (b=0; b<numlength2; b += 1) {
-				System.out.println(array1[a].equals(array2[b]));
+		findElement(elementList, elementList2);
+		
+		} 
+	
+		static String findElement(List<String> elementList, List<String> elementList2) {
+		String result = null;
+		Iterator<String> somethingElse = elementList.iterator();
+		while (result == null && somethingElse.hasNext()) {
+			String current = somethingElse.next();
+			elementList.contains(current);
+			if (elementList2.contains(current)) {
+				System.out.println("Match: " + current);
+				result = current;
 			}
+				
 		}
+		return result;
 	}
 
 }
