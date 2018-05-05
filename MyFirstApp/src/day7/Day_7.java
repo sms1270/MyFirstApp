@@ -24,7 +24,7 @@ public class Day_7 {
 	}
 	
 	
-	final static void icyHot(int x,int y) {
+	static void icyHot(int x,int y) {
 		boolean yesOrNo;
 		if ( ( (x < 0) && (y > 100) ) || ( (y < 0) && ( x > 100) ) ) {
 			yesOrNo = true;
@@ -38,7 +38,7 @@ public class Day_7 {
 	}
 	
 	
-	final static void posNeg(int x,int y,boolean z) {
+	static void posNeg(int x,int y,boolean z) {
 		boolean yesOrNo;
 		if (z == true) {
 			if ( (x < 0 ) && (y < 0 ) ) {
@@ -55,7 +55,7 @@ public class Day_7 {
 	}
 	
 	
-	final static void monthOfYear(int mon) {
+	static void monthOfYear(int mon) {
 		String[] entry = {
 				"Entry is wrong",
 				"January",
